@@ -40,6 +40,7 @@ private:
 
         ros.height = msg.height();
         ros.width = msg.width();
+        std::cout<<"[Publishing RGB frames]: "<<ros.width<<"x"<<ros.height<<std::endl;
 
         ros.encoding = "rgb8";
 
@@ -66,6 +67,7 @@ private:
 
         ros.height = msg.height();
         ros.width = msg.width();
+        std::cout<<"[Publishing Depth frames]: "<<ros.width<<"x"<<ros.height<<std::endl;
 
         switch (msg.pixel_format_type())
         {
@@ -99,8 +101,7 @@ private:
     gz::transport::Node gz_node_;
 
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr rgb_pub_;
-    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr depth_pub_;
-};
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr depth_pub_; };
 
 int main(int argc, char **argv)
 {
