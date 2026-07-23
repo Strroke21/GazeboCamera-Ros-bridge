@@ -18,12 +18,11 @@ public:
         qos.durability_volatile();
         
         imu_pub_ = this->create_publisher<sensor_msgs::msg::Imu>(
-            "/imu/data",
+            "/zed2i/imu",
             qos);
 
         const std::string gz_topic =
-            "/world/anti_drone/model/ad_drone1/model/iris_with_gimbal/"
-            "model/iris_with_standoffs/link/imu_link/sensor/imu_sensor/imu";
+            "/zed2i/imu";
 
         if (!gz_node_.Subscribe(
                 gz_topic,
