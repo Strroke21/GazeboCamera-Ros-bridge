@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>anti_drone_system</name>
+  <name>gz-ros2-bridge</name>
   <version>0.0.1</version>
-  <description>Anti drone system package with camera subscriber and ROS 2 publisher</description>
+  <description>Gazebo bridge for sensor integration with ROS2</description>
 
   <maintainer email="rishipatil7007@gmail.com">Rishi Patil</maintainer>
   <license>Apache-2.0</license>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(anti_drone_system)
+project(gz-ros2-bridge)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -105,3 +105,4 @@ install(TARGETS
     livox_ros
     DESTINATION lib/${PROJECT_NAME}
 )
+ament_package()
