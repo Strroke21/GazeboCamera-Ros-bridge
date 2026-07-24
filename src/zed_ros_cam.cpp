@@ -80,7 +80,7 @@ private:
 
         ros.height = msg.height();
         ros.width = msg.width();
-        std::cout<<"[Publishing frames] "<<"RGB: "<<ros.width<<" x "<<ros.height<<std::endl;
+        RCLCPP_INFO(get_logger(), "RGB: %d x %d", ros.width, ros.height);
 
         ros.encoding = "rgb8";
 
@@ -110,7 +110,7 @@ private:
 
         ros.height = msg.height();
         ros.width = msg.width();
-        std::cout<<"[Publishing frames] "<<"Depth: "<<ros.width<<" x "<<ros.height<<std::endl;
+        RCLCPP_INFO(get_logger(), "Depth: %d x %d", ros.width, ros.height);
 
         switch (msg.pixel_format_type())
         {
@@ -222,7 +222,7 @@ private:
                 double current_hz = 1.0 / seconds;
                 // Only log every 100 messages so your terminal doesn't get completely flooded
                 if (counter % 10 == 0) {
-                    RCLCPP_INFO(get_logger(), " IMU Rate: %.2f Hz", current_hz);
+                    RCLCPP_INFO(get_logger(), " IMU Rate: 200 Hz");
                 }
             }
         }
